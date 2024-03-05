@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h3 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+        }
+        input[type="text"],
+        input[type="password"],
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .already-user {
+            text-align: center;
+            width:200px;
+        }
+        .deleteUser{
+            text-align: center;
+            width:200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Login Here</h3>
+        <form action="accountservlet" method="post">
+            <label for="fullname">Full Name</label>
+            <input type="text" placeholder="Full Name" name="fn">
+
+            <label for="username">Username</label>
+            <input type="text" placeholder="Username" name="un">
+
+            <label for="email">Email</label>
+            <input type="text" placeholder="Email" name="ei">
+
+            <label for="password">Password</label>
+            <input type="password" placeholder="Password" name="pw">
+
+            <label for="confirmpassword">Confirm Password</label>
+            <input type="password" placeholder="Confirm Password" name="cpw">
+
+            <button type="submit">Login</button>
+            <br>
+            <br>
+        </form>
+         	<center>
+         	<div class="already-user">
+            <a href="login.html" ><button> Already User</button></a>
+            </div>
+            <div class="deleteUser">
+             <button onClick="window.location.href = 'delete.html'">Delete User</button>
+             </div>
+         	</center>
+    </div>
+</body>
+</html>
